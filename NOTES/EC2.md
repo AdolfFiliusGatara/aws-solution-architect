@@ -31,6 +31,7 @@ How much storage space
 ## EC2 User Data
 
 we can bootstrapping to do a one-time-script execution on the server
+Similar concept as startup script
 
 usually used for:
 
@@ -181,7 +182,8 @@ Recommended For:
   ```*disc might be different than actual```
 - spot-instance price is **fluctuative** (but somehow predictable, determinded by AWS' supply & demand)
 - BUT **can lose** at any point of time, 
-    if our control cost "max-price" is cheaper than current spot price
+    if our control cost "max-price" is cheaper than current spot price]
+- To terminate Spot Instances we need to cancel the Spot Request, then terminate associated instances
 
 Recommended For:
 **Failure-Resilient** workloads:
@@ -207,7 +209,6 @@ Companies that have **strong regulatory or compliance** needs
 > - instances run on hardware thats dedicated to you
 > - May share hardware with other instances in same account
 > - no control over instance placement (start/stop)
-
 
 ### Capacity Reservation
 - Reserve on demand in a specific AZ
